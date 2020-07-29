@@ -59,7 +59,7 @@ export const getCorporationLoyaltyStore = (
 };
 export const queryNames = (
   ids: number[]
-): Promise<{ category: number; id: number; name: string }[]> => {
+): Promise<{ category: "corporation"; id: number; name: string }[]> => {
   const URL = "/universe/names/";
   return new Promise((resolve, reject) => {
     Taro.request({ url: combineURL(URL), method: "POST", data: ids })
